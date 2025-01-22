@@ -252,7 +252,7 @@ def group_list(request):
 @login_required_decorator
 def student_create(request):
     model=Student()
-    form=SubjectForm(request.POST,instance=model)
+    form=StudentForm(request.POST,instance=model)
     if request.POST and form.is_valid():
         form.save()
         return redirect('student_list')
@@ -264,7 +264,7 @@ def student_create(request):
 @login_required_decorator
 def student_edit(request,pk):
     model=Student.objects.get(pk=pk)
-    form=SubjectForm(request.POST,instance=model)
+    form=StudentForm(request.POST,instance=model)
     if request.POST and form.is_valid():
         form.save()
         return redirect('student_list')
@@ -289,12 +289,6 @@ def student_list(request):
         'students':students
     }
     return render(request,'student/list.html',ctx)
-
-
-
-
-
-
 
 
 

@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+SECRET_KEY = 'django-insecure-3nincsnq*2&xo+apx%_032!vg%4&apyxzjagvmwej=h52e&*$_'
 
 # C extensions
 *.so
