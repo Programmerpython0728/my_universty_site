@@ -15,7 +15,7 @@
                     <div class="col-md-12">
                         <div class="overview-wrap">
                             <h2 class="title-1">Subject List</h2>
-                            <a class="au-btn au-btn-icon au-btn--blue" href="{%url 'subject_create'%}">
+                            <a class="au-btn au-btn-icon au-btn--blue" href="{% url 'subject_create' %}">
                                 <i class="zmdi zmdi-plus"></i>add</a>
                         </div>
                     </div>
@@ -36,8 +36,8 @@
                                 <tbody>
                                     {% for subject in subjects %}
                                     <tr>
-                                        <td>{{ subject.id }}</td>
-                                        <td>{{ subject.name }}</td>
+                                        <td>{{subject.id }}</td>
+                                        <td>{{subject.name }}</td>
                                         <td>
                                             <div class="table-data-feature">
                                                 <a class="item" data-toggle="tooltip" href="{% url 'subject_edit' pk=subject.id %}" data-placement="top" title="" data-original-title="Edit">

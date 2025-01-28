@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
@@ -28,17 +29,23 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th> Last name</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Age</th>
+                                        <th>Subject</th>
+                                        <th>Kafedra</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                  {% for teacher in teachers %}
+                                    {% for teacher in teachers %}
                                     <tr>
-                                        <td>{{teacher.id }}</td>
-                                         <td>{{ teacher.name }}</td>
-                                        <td> {{teacher.last_name }}</td>
+                                        <td>{{ teacher.id }}</td>
+                                        <td>{{ teacher.first_name }}</td>
+                                        <td>{{ teacher.last_name }}</td>
+                                        <td>{{ teacher.age }}</td>
+                                        <td>{{ teacher.subject_name }}</td>
+                                        <td>{{ teacher.kafedra_name }}</td>
                                         <td>
                                             <div class="table-data-feature">
                                                 <a class="item" data-toggle="tooltip" href="{% url 'teacher_edit' pk=teacher.id %}" data-placement="top" title="" data-original-title="Edit">

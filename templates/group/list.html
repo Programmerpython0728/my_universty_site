@@ -1,10 +1,10 @@
+
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
  <div class="page-container">
     <!-- HEADER DESKTOP-->
-     {% include 'userbar.html' %}
-
+    {%include 'userbar.html'%}
     <!-- HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->
@@ -30,6 +30,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
+                                        <th>Faculty</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -38,6 +39,7 @@
                                     <tr>
                                         <td>{{ group.id }}</td>
                                         <td>{{ group.name }}</td>
+                                        <td>{{ group.faculty }}</td>
                                         <td>
                                             <div class="table-data-feature">
                                                 <a class="item" data-toggle="tooltip" href="{% url 'group_edit' pk=group.id %}" data-placement="top" title="" data-original-title="Edit">

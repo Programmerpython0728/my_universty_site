@@ -1,6 +1,6 @@
 
-{% extends 'base.html'%}
-{%load static %}
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
  <div class="page-container">
     <!-- HEADER DESKTOP-->
@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">Add Teacher</h2>
+                            <h2 class="title-1">Add Faculty</h2>
                         </div>
                     </div>
                 </div>
@@ -30,17 +30,19 @@
                                 <form method="post">
                                     {% csrf_token %}
                                     <div class="form-group">
-                                        <label class=" form-control-label">Name</label>
-                                        {{ form.name }}
-
-
-                                    </div>
-                                    <div>
-                                         <label class=" form-control-label"> Last name  </label>
+                                        <label class=" form-control-label">First Name</label>
+                                        {{ form.first_name }}
+                                        <label class=" form-control-label">Last Name</label>
                                         {{ form.last_name}}
+                                        <label class=" form-control-label">Age</label>
+                                        {{ form.age}}
+                                        <label class=" form-control-label">Subject</label>
+                                        {{ form.subject}}
+                                        <label class=" form-control-label">Kafedra</label>
+                                        {{ form.kafedra}}
                                     </div>
 
-                                  {% if model %}
+                                    {% if model %}
                                     <button type="submit" class="btn btn-warning btn-md">Save</button>
                                     {% else %}
                                     <button type="submit" class="btn btn-success btn-md">Add</button>
