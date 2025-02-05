@@ -45,3 +45,5 @@ class Student(models.Model):
     age = models.IntegerField(null=False, blank=False)
     group = models.ForeignKey(Group, null=True, on_delete=models.SET_NULL)
     image = models.ImageField(upload_to='images', null=True)
+    gpa=models.FloatField(null=False,blank=False)
+

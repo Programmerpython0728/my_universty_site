@@ -54,4 +54,8 @@ class StudentForm(forms.ModelForm):
         "last_name":forms.TextInput(attrs={'class':'form-control'}),
         "age":forms.NumberInput(attrs={'class':'form-control'}),
         "group":forms.Select(attrs={'class':'form-control'}),
-        "image": forms.FileInput(attrs={'class': 'form-control'})}
+        "image": forms.FileInput(attrs={'class': 'form-control'}),
+        "gpa":forms.NumberInput(attrs={'class':'form-control'})
+
+
+        }
